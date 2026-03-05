@@ -1,5 +1,6 @@
 import { cva } from "class-variance-authority";
 import { cn, FormattedText } from "drupal-canvas";
+import { motion } from "motion/react";
 
 const Hero = ({
   title,
@@ -47,7 +48,8 @@ const Hero = ({
               {description}
             </FormattedText>
             <div>
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1 }}
                 href={buttonLink}
                 className={cn(
                   "inline-block rounded-sm bg-mauve px-12 py-3 text-sm font-medium text-inverted-text transition hover:bg-mauve/75",
@@ -55,7 +57,7 @@ const Hero = ({
                 )}
               >
                 {buttonLabel}
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>

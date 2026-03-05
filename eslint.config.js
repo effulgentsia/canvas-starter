@@ -1,8 +1,8 @@
-import { recommended as drupalCanvasRecommended } from "@drupal-canvas/eslint-config";
+// import { recommended as drupalCanvasRecommended } from "@drupal-canvas/eslint-config";
 import storybook from "eslint-plugin-storybook";
 
 export default [
   { ignores: ["dist", "node_modules", "storybook-static"] },
-  ...drupalCanvasRecommended,
+  // ...drupalCanvasRecommended,
   ...storybook.configs["flat/recommended"],
 ];
