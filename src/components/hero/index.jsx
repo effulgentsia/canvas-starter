@@ -1,5 +1,6 @@
+import Button from "@/components/button";
 import { cva } from "class-variance-authority";
-import { cn, FormattedText } from "drupal-canvas";
+import { FormattedText } from "drupal-canvas";
 import { motion } from "motion/react";
 
 const Hero = ({
@@ -48,16 +49,9 @@ const Hero = ({
               {description}
             </FormattedText>
             <div>
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                href={buttonLink}
-                className={cn(
-                  "inline-block rounded-sm bg-mauve px-12 py-3 text-sm font-medium text-inverted-text transition hover:bg-mauve/75",
-                  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
-                )}
-              >
-                {buttonLabel}
-              </motion.a>
+              <motion.div whileHover={{ scale: 1.1 }} className="inline-block">
+                <Button label={buttonLabel} href={buttonLink} size="lg" />
+              </motion.div>
             </div>
           </div>
         </div>

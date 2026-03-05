@@ -1,0 +1,55 @@
+name: Button
+machineName: button
+status: true
+required:
+  - label
+  - href
+props:
+  properties:
+    label:
+      title: Label
+      type: string
+      examples:
+        - Learn more
+    href:
+      title: Link
+      type: string
+      format: uri-reference
+      examples:
+        - /page/1
+    variant:
+      title: Variant
+      type: string
+      enum:
+        - mauve
+        - teal
+        - surface
+      meta:enum:
+        mauve: Mauve
+        teal: Teal
+        surface: Surface
+      examples:
+        - mauve
+    width:
+      title: Width
+      type: string
+      enum:
+        - auto
+        - full
+      meta:enum:
+        auto: Auto
+        full: Full width
+      examples:
+        - auto
+    size:
+      title: Size
+      type: string
+      enum:
+        - md
+        - lg
+      meta:enum:
+        md: Medium
+        lg: Large
+      examples:
+        - md
+slots: []

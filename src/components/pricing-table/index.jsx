@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "@/components/button";
 import {
   buildTierDescriptions,
   buildTierNames,
@@ -143,15 +144,12 @@ const PricingTable = ({
 
       {/* Button */}
       <div>
-        <a
+        <Button
+          label={buttonLabel.replace("{tier}", tierNames[tier])}
           href={buttonLink}
-          className={cn(
-            "inline-block w-full rounded-sm bg-mauve px-12 py-3 text-center text-sm font-medium text-inverted-text transition hover:bg-mauve/75",
-            "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
-          )}
-        >
-          {buttonLabel.replace("{tier}", tierNames[tier])}
-        </a>
+          size="lg"
+          width="full"
+        />
       </div>
     </div>
   );
