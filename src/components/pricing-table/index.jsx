@@ -1,4 +1,10 @@
 import { useState } from "react";
+import {
+  buildTierDescriptions,
+  buildTierNames,
+  buildTierPrices,
+  getCurrentPrice,
+} from "@/components/pricing-table/utils";
 import { cn } from "drupal-canvas";
 
 const PricingTable = ({
@@ -23,35 +29,24 @@ const PricingTable = ({
   const [isAnnual, setIsAnnual] = useState(annualSelectedByDefault);
   const [tier, setTier] = useState(defaultTier);
 
-  const tierNames = {
-    entry: entryTierName,
-    mid: midTierName,
-    advanced: advancedTierName,
-  };
-  const tierDescriptions = {
-    entry: entryTierDescription,
-    mid: midTierDescription,
-    advanced: advancedTierDescription,
-  };
-  const tierPrices = {
-    entry: {
-      monthly: entryTierPriceMonthly,
-      annual: entryTierPriceAnnual,
-    },
-    mid: {
-      monthly: midTierPriceMonthly,
-      annual: midTierPriceAnnual,
-    },
-    advanced: {
-      monthly: advancedTierPriceMonthly,
-      annual: advancedTierPriceAnnual,
-    },
-  };
-
-  // Calculate current price based on selections.
-  const getCurrentPrice = (tierName) => {
-    return tierPrices[tierName][isAnnual ? "annual" : "monthly"];
-  };
+  const tierNames = buildTierNames({
+    entryTierName,
+    midTierName,
+    advancedTierName,
+  });
+  const tierDescriptions = buildTierDescriptions({
+    entryTierDescription,
+    midTierDescription,
+    advancedTierDescription,
+  });
+  const tierPrices = buildTierPrices({
+    entryTierPriceMonthly,
+    entryTierPriceAnnual,
+    midTierPriceMonthly,
+    midTierPriceAnnual,
+    advancedTierPriceMonthly,
+    advancedTierPriceAnnual,
+  });
 
   return (
     <div className="max-w-2xl">
@@ -103,7 +98,11 @@ const PricingTable = ({
       <div className="mb-6 flex flex-col gap-4 sm:flex-row">
         {["entry", "mid", "advanced"].map((planName) => {
           const isSelected = tier === planName;
-          const price = getCurrentPrice(planName);
+          const price = getCurrentPrice({
+            tierPrices,
+            tierName: planName,
+            isAnnual,
+          });
 
           return (
             <div
