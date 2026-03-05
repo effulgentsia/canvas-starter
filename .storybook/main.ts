@@ -1,11 +1,13 @@
-const config = {
+import type { StorybookConfig } from "@storybook/react-vite";
+
+const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: ["@storybook/addon-docs"],
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  async viteFinal(config) {
+  async viteFinal(viteConfig) {
     // In most stories we use top-level awaits when invoking the
     // `getComponentExamples()` function.
     // @see src/stories/lib/get-examples.js
@@ -13,11 +15,16 @@ const config = {
     // `build.target` for Vite solves it.
     // @see https://github.com/storybookjs/storybook/issues/25399#issuecomment-1905569873
     // @see https://vite.dev/config/build-options.html#build-target
-    if (!config.build) {
-      config.build = {};
+    if (!viteConfig.build) {
+      viteConfig.build = {};
     }
-    config.build.target = ["chrome107", "edge107", "firefox104", "safari16"];
-    return config;
+    viteConfig.build.target = [
+      "chrome107",
+      "edge107",
+      "firefox104",
+      "safari16",
+    ];
+    return viteConfig;
   },
 };
 

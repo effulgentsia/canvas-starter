@@ -28,6 +28,7 @@
     "@storybook/addon-docs": "^10.0.8",
     "@storybook/react-vite": "^10.0.8",
     "@tailwindcss/vite": "^4.1.17",
+    "@types/node": "^25.3.3",
     "@vitejs/plugin-react": "^5.1.1",
     "@vitejs/plugin-react-swc": "^4.2.2",
     "baseline-browser-mapping": "^2.9.19",
@@ -46,24 +47,33 @@
     "prettier-plugin-tailwindcss": "^0.7.1",
     "storybook": "^10.0.8",
     "tailwindcss": "^4.1.17",
+    "tsc-files": "^1.1.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
     "vite": "^7.2.2"
   },
   "lint-staged": {
-    "*.{js,jsx,json,html,md,mdx,yml}": "prettier --write",
-    "*.{js,jsx}": "eslint --fix"
+    "*.{js,jsx,ts,tsx,json,html,md,mdx,yml,yaml}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{ts,tsx}": "npm run s:typecheck:staged --"
   },
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
     "storybook": "npm run dev",
     "build": "storybook build",
+    "typecheck": "npm run code:check:type",
     "code:check": "run-s -c -n code:check:**",
     "code:check:prettier": "npm run s:prettier -- --check",
     "code:check:eslint": "npm run s:eslint",
+    "code:check:type": "npm run s:typecheck",
     "code:fix": "run-s -c -n code:fix:**",
     "code:fix:prettier": "npm run s:prettier -- --write",
     "code:fix:eslint": "npm run s:eslint -- --fix",
-    "s:prettier": "prettier \"**/*.{js,jsx,json,html,md,mdx,yml}\"",
-    "s:eslint": "eslint \"**/*.{js,jsx,yml,yaml}\"",
+    "code:fix:type": "npm run s:typecheck",
+    "s:prettier": "prettier \"**/*.{js,jsx,ts,tsx,json,html,md,mdx,yml,yaml}\"",
+    "s:eslint": "eslint \"**/*.{js,jsx,ts,tsx,yml,yaml}\"",
+    "s:typecheck:staged": "tsc-files --noEmit --project tsconfig.json",
+    "s:typecheck": "tsc --noEmit",
     "prepare": "husky"
   }
 }

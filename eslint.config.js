@@ -1,10 +1,11 @@
 // import { recommended as drupalCanvasRecommended } from "@drupal-canvas/eslint-config";
 import storybook from "eslint-plugin-storybook";
+import tseslint from "typescript-eslint";
 
 export default [
   { ignores: ["dist", "node_modules", "storybook-static"] },
   {
-    files: ["**/*.{js,jsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       parserOptions: {
         ecmaVersion: "latest",
@@ -13,6 +14,7 @@ export default [
       },
     },
   },
+  ...tseslint.configs.recommended,
   // ...drupalCanvasRecommended,
   ...storybook.configs["flat/recommended"],
 ];

@@ -1,6 +1,8 @@
 import "../src/components/global.css";
 
-export default {
+import type { Preview } from "@storybook/react-vite";
+
+const preview: Preview = {
   parameters: {
     viewport: {
       // Match viewport sizes in Drupal Canvas.
@@ -47,3 +49,5 @@ export default {
     viewport: { value: "tablet", isRotated: false },
   },
 };
+
+export default preview;
