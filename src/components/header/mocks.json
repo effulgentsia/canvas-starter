@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Branded header",
+    "props": {},
+    "slots": {
+      "branding": ["header-logo-default"],
+      "navigation": ["header-navigation-default"]
+    },
+    "elements": {
+      "header-logo-default": {
+        "type": "logo",
+        "props": {
+          "linkToFrontPage": true
+        }
+      },
+      "header-navigation-default": {
+        "type": "navigation",
+        "props": {}
+      }
+    }
+  },
+  {
+    "name": "Light",
+    "props": {
+      "darkVariant": false
+    },
+    "slots": {
+      "branding": ["header-logo-dark"],
+      "navigation": ["header-navigation-dark"]
+    },
+    "elements": {
+      "header-logo-dark": {
+        "type": "logo",
+        "props": {
+          "linkToFrontPage": true
+        }
+      },
+      "header-navigation-dark": {
+        "type": "navigation",
+        "props": {}
+      }
+    }
+  },
+  {
+    "name": "Empty",
+    "props": {}
+  }
+]

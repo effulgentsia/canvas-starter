@@ -1,5 +1,5 @@
 {
-  "root": "canvas:component-tree",
+  "title": "Home",
   "elements": {
     "12db327c-9a19-4952-9389-80ba8354a5b0": {
       "type": "js.header",
@@ -20,7 +20,7 @@
     },
     "95805f3a-b32e-4d58-b08e-f506579ab18f": {
       "type": "js.navigation",
-      "props": []
+      "props": {}
     },
     "8219557f-cb7b-4ccd-970f-5aba5eaf776b": {
       "type": "js.hero",
@@ -101,7 +101,7 @@
     },
     "7899ab7e-c603-4110-9b2a-25ca3a4d0fa7": {
       "type": "js.grid",
-      "props": [],
+      "props": {},
       "slots": {
         "content": [
           "35379040-c351-4050-9c6d-8e4cd795dcf8",
@@ -286,18 +286,6 @@
       "props": {
         "linkToFrontPage": false
       }
-    },
-    "canvas:component-tree": {
-      "type": "canvas:component-tree",
-      "props": {},
-      "children": [
-        "12db327c-9a19-4952-9389-80ba8354a5b0",
-        "8219557f-cb7b-4ccd-970f-5aba5eaf776b",
-        "ecaa0198-64b4-49d8-8ca9-c7cd600a955a",
-        "496c3054-2795-46ed-9c96-2a2b8f9ffcbd",
-        "1d3ff9bf-917b-4658-9946-ed65622cf0c3",
-        "c3ba66be-2b6b-4030-96d0-3a99b77471fe"
-      ]
     }
   }
 }
