@@ -1,30 +1,32 @@
-[
-  {
-    "name": "Dark",
-    "root": "logo-dark-preview",
-    "elements": {
-      "logo-dark-preview": {
-        "type": "section",
-        "props": {
-          "darkVariant": true,
-          "backgroundColor": "base"
+{
+  "mocks": [
+    {
+      "name": "Dark",
+      "root": "logo-dark-preview",
+      "elements": {
+        "logo-dark-preview": {
+          "type": "section",
+          "props": {
+            "darkVariant": true,
+            "backgroundColor": "base"
+          },
+          "slots": {
+            "content": ["logo-dark"]
+          }
         },
-        "slots": {
-          "content": ["logo-dark"]
-        }
-      },
-      "logo-dark": {
-        "type": "logo",
-        "props": {
-          "linkToFrontPage": true
+        "logo-dark": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
         }
       }
+    },
+    {
+      "name": "No link",
+      "props": {
+        "linkToFrontPage": false
+      }
     }
-  },
-  {
-    "name": "No link",
-    "props": {
-      "linkToFrontPage": false
-    }
-  }
-]
+  ]
+}

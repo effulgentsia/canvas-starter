@@ -1,8 +1,10 @@
-[
-  {
-    "name": "Light",
-    "props": {
-      "darkVariant": false
+{
+  "mocks": [
+    {
+      "name": "Light",
+      "props": {
+        "darkVariant": false
+      }
     }
-  }
-]
+  ]
+}

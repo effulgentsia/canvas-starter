@@ -1,48 +1,50 @@
-[
-  {
-    "name": "Branded header",
-    "props": {},
-    "slots": {
-      "branding": ["header-logo-default"],
-      "navigation": ["header-navigation-default"]
-    },
-    "elements": {
-      "header-logo-default": {
-        "type": "logo",
-        "props": {
-          "linkToFrontPage": true
-        }
+{
+  "mocks": [
+    {
+      "name": "Branded header",
+      "props": {},
+      "slots": {
+        "branding": ["header-logo-default"],
+        "navigation": ["header-navigation-default"]
       },
-      "header-navigation-default": {
-        "type": "navigation",
-        "props": {}
-      }
-    }
-  },
-  {
-    "name": "Light",
-    "props": {
-      "darkVariant": false
-    },
-    "slots": {
-      "branding": ["header-logo-dark"],
-      "navigation": ["header-navigation-dark"]
-    },
-    "elements": {
-      "header-logo-dark": {
-        "type": "logo",
-        "props": {
-          "linkToFrontPage": true
+      "elements": {
+        "header-logo-default": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-default": {
+          "type": "navigation",
+          "props": {}
         }
-      },
-      "header-navigation-dark": {
-        "type": "navigation",
-        "props": {}
       }
+    },
+    {
+      "name": "Light",
+      "props": {
+        "darkVariant": false
+      },
+      "slots": {
+        "branding": ["header-logo-dark"],
+        "navigation": ["header-navigation-dark"]
+      },
+      "elements": {
+        "header-logo-dark": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-dark": {
+          "type": "navigation",
+          "props": {}
+        }
+      }
+    },
+    {
+      "name": "Empty",
+      "props": {}
     }
-  },
-  {
-    "name": "Empty",
-    "props": {}
-  }
-]
+  ]
+}
