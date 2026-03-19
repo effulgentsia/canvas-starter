@@ -1,6 +1,5 @@
 import { cva } from "class-variance-authority";
 import { cn } from "drupal-canvas";
-import type { VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
   "inline-block text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
@@ -28,20 +27,7 @@ const buttonVariants = cva(
   },
 );
 
-interface ButtonProps extends VariantProps<typeof buttonVariants> {
-  label: string;
-  href: string;
-  className?: string;
-}
-
-const Button = ({
-  label,
-  href,
-  variant,
-  width,
-  size,
-  className,
-}: ButtonProps) => {
+const Button = ({ label, href, variant, width, size, className }) => {
   return (
     <a
       className={cn(buttonVariants({ variant, width, size }), className)}
