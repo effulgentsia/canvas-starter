@@ -5,7 +5,7 @@ import {
   buildTierNames,
   buildTierPrices,
   getCurrentPrice,
-} from "@/components/pricing-table/utils";
+} from "@/lib/pricing-utils";
 import { cn } from "drupal-canvas";
 
 const PricingTable = ({
