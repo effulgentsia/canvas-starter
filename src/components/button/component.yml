@@ -3,7 +3,7 @@ machineName: button
 status: true
 required:
   - label
-  - href
+  - link
 props:
   properties:
     label:
@@ -11,7 +11,7 @@ props:
       type: string
       examples:
         - Learn more
-    href:
+    link:
       title: Link
       type: string
       format: uri-reference
