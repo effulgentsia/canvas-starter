@@ -5,9 +5,9 @@ React components in this repository are considered Canvas components, and they
 need to adhere to the Canvas component contract defined in the
 `canvas-component-definition` skill.
 
-For all operations involving React components, the `component.yml` files, and
-`src/components/global.css` in this repository, load the
-`canvas-component-definition` skill.
+For all operations involving React components, the `component.yml` files,
+Workbench mock files such as `mocks.json`, and `src/global.css` in this
+repository, load the `canvas-component-definition` skill.
 
 ## Validation and upload
 
@@ -20,8 +20,8 @@ npm run code:fix
 
 Fix any issues that were not fixed automatically, and re-run the check.
 
-When all issues are fixed, ask the user if modified or new components need to be
-uploaded to Canvas. See the `canvas-component-upload` skill.
+When all issues are fixed, ask the user if they would like to push the current
+Canvas changes to Canvas. See the `canvas-component-push` skill.
 
 ## Writing and style
 
