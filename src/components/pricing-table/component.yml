@@ -22,62 +22,62 @@ props:
   properties:
     entryTierName:
       type: string
-      title: "Entry tier: Name"
+      title: 'Entry tier: Name'
       examples:
         - Starter
     entryTierDescription:
       type: string
-      title: "Entry tier: Description"
+      title: 'Entry tier: Description'
       examples:
         - For pilots and focused projects
     entryTierPriceMonthly:
       type: number
-      title: "Entry tier: Price, monthly"
+      title: 'Entry tier: Price, monthly'
       examples:
         - 2500
     entryTierPriceAnnual:
       type: number
-      title: "Entry tier: Price, annual"
+      title: 'Entry tier: Price, annual'
       examples:
         - 25000
     midTierName:
       type: string
-      title: "Mid tier: Name"
+      title: 'Mid tier: Name'
       examples:
         - Growth
     midTierDescription:
       type: string
-      title: "Mid tier: Description"
+      title: 'Mid tier: Description'
       examples:
         - For teams scaling AI-assisted delivery
     midTierPriceMonthly:
       type: number
-      title: "Mid tier: Price, monthly"
+      title: 'Mid tier: Price, monthly'
       examples:
         - 4500
     midTierPriceAnnual:
       type: number
-      title: "Mid tier: Price, annual"
+      title: 'Mid tier: Price, annual'
       examples:
         - 45000
     advancedTierName:
       type: string
-      title: "Advanced tier: Name"
+      title: 'Advanced tier: Name'
       examples:
         - Enterprise
     advancedTierDescription:
       type: string
-      title: "Advanced tier: Description"
+      title: 'Advanced tier: Description'
       examples:
         - For complex organizations and mission-critical work
     advancedTierPriceMonthly:
       type: number
-      title: "Advanced tier: Price, monthly"
+      title: 'Advanced tier: Price, monthly'
       examples:
         - 9500
     advancedTierPriceAnnual:
       type: number
-      title: "Advanced tier: Price, annual"
+      title: 'Advanced tier: Price, annual'
       examples:
         - 95000
     defaultTier:

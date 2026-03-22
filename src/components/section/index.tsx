@@ -1,32 +1,32 @@
-import { cva } from "class-variance-authority";
-import { cn } from "drupal-canvas";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
-import type { VariantProps } from "class-variance-authority";
+import { cva } from 'class-variance-authority';
+import { cn } from 'drupal-canvas';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { VariantProps } from 'class-variance-authority';
 
-const sectionVariants = cva("", {
+const sectionVariants = cva('', {
   variants: {
     colorScheme: {
-      light: "",
-      dark: "dark",
+      light: '',
+      dark: 'dark',
     },
     backgroundColor: {
-      base: "bg-base",
-      mantle: "bg-mantle",
-      crust: "bg-crust",
+      base: 'bg-base',
+      mantle: 'bg-mantle',
+      crust: 'bg-crust',
     },
   },
   defaultVariants: {
-    colorScheme: "light",
+    colorScheme: 'light',
   },
 });
 
 type SectionBackgroundColor = NonNullable<
-  VariantProps<typeof sectionVariants>["backgroundColor"]
+  VariantProps<typeof sectionVariants>['backgroundColor']
 >;
 
 export interface SectionProps extends Omit<
-  ComponentPropsWithoutRef<"section">,
-  "children" | "content"
+  ComponentPropsWithoutRef<'section'>,
+  'children' | 'content'
 > {
   backgroundColor?: SectionBackgroundColor;
   content?: ReactNode;
@@ -45,7 +45,7 @@ function Section({
       className={cn(
         sectionVariants({
           backgroundColor,
-          colorScheme: darkVariant ? "dark" : "light",
+          colorScheme: darkVariant ? 'dark' : 'light',
         }),
         className,
       )}

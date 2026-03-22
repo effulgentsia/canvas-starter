@@ -1,37 +1,37 @@
-import { cva } from "class-variance-authority";
-import { cn, FormattedText } from "drupal-canvas";
-import type { CSSProperties, HTMLAttributes } from "react";
-import type { VariantProps } from "class-variance-authority";
+import { cva } from 'class-variance-authority';
+import { cn, FormattedText } from 'drupal-canvas';
+import type { CSSProperties, HTMLAttributes } from 'react';
+import type { VariantProps } from 'class-variance-authority';
 
-const cardVariants = cva("flex flex-col gap-3 rounded-lg bg-surface-0 p-6");
+const cardVariants = cva('flex flex-col gap-3 rounded-lg bg-surface-0 p-6');
 
-const cardIconVariants = cva("size-8", {
+const cardIconVariants = cva('size-8', {
   variants: {
     iconColor: {
-      text: "bg-text",
-      rosewater: "bg-rosewater",
-      flamingo: "bg-flamingo",
-      pink: "bg-pink",
-      mauve: "bg-mauve",
-      red: "bg-red",
-      maroon: "bg-maroon",
-      peach: "bg-peach",
-      yellow: "bg-yellow",
-      green: "bg-green",
-      teal: "bg-teal",
-      sky: "bg-sky",
-      sapphire: "bg-sapphire",
-      blue: "bg-blue",
-      lavender: "bg-lavender",
+      text: 'bg-text',
+      rosewater: 'bg-rosewater',
+      flamingo: 'bg-flamingo',
+      pink: 'bg-pink',
+      mauve: 'bg-mauve',
+      red: 'bg-red',
+      maroon: 'bg-maroon',
+      peach: 'bg-peach',
+      yellow: 'bg-yellow',
+      green: 'bg-green',
+      teal: 'bg-teal',
+      sky: 'bg-sky',
+      sapphire: 'bg-sapphire',
+      blue: 'bg-blue',
+      lavender: 'bg-lavender',
     },
   },
   defaultVariants: {
-    iconColor: "teal",
+    iconColor: 'teal',
   },
 });
 
 type CardIconColor = NonNullable<
-  VariantProps<typeof cardIconVariants>["iconColor"]
+  VariantProps<typeof cardIconVariants>['iconColor']
 >;
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
@@ -52,13 +52,13 @@ function Card({
   const iconMaskStyle: CSSProperties | undefined = iconNameFromLucide
     ? {
         maskImage: `url(https://esm.sh/lucide-static@0.544.0/icons/${iconNameFromLucide}.svg)`,
-        maskPosition: "center",
-        maskRepeat: "no-repeat",
-        maskSize: "contain",
+        maskPosition: 'center',
+        maskRepeat: 'no-repeat',
+        maskSize: 'contain',
         WebkitMaskImage: `url(https://esm.sh/lucide-static@0.544.0/icons/${iconNameFromLucide}.svg)`,
-        WebkitMaskPosition: "center",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskSize: "contain",
+        WebkitMaskPosition: 'center',
+        WebkitMaskRepeat: 'no-repeat',
+        WebkitMaskSize: 'contain',
       }
     : undefined;
 

@@ -1,13 +1,13 @@
-import { cva } from "class-variance-authority";
-import { cn, FormattedText } from "drupal-canvas";
-import type { HTMLAttributes } from "react";
+import { cva } from 'class-variance-authority';
+import { cn, FormattedText } from 'drupal-canvas';
+import type { HTMLAttributes } from 'react';
 
 const paragraphVariants = cva(
-  "mx-auto max-w-2xl text-center leading-relaxed text-balance text-text",
+  'mx-auto max-w-2xl text-center leading-relaxed text-balance text-text',
 );
 
 export interface ParagraphProps {
-  className?: HTMLAttributes<HTMLDivElement>["className"];
+  className?: HTMLAttributes<HTMLDivElement>['className'];
   text: string;
 }
 

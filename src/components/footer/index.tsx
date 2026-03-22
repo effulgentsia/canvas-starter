@@ -1,34 +1,34 @@
-import { hasEmptySlotPlaceholder } from "@/lib/types";
-import { cva } from "class-variance-authority";
-import { cn, FormattedText } from "drupal-canvas";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
-import type { VariantProps } from "class-variance-authority";
+import { hasEmptySlotPlaceholder } from '@/lib/types';
+import { cva } from 'class-variance-authority';
+import { cn, FormattedText } from 'drupal-canvas';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { VariantProps } from 'class-variance-authority';
 
-const footerVariants = cva("", {
+const footerVariants = cva('', {
   variants: {
     colorScheme: {
-      light: "",
-      dark: "dark",
+      light: '',
+      dark: 'dark',
     },
     backgroundColor: {
-      base: "bg-base",
-      mantle: "bg-mantle",
-      crust: "bg-crust",
+      base: 'bg-base',
+      mantle: 'bg-mantle',
+      crust: 'bg-crust',
     },
   },
   defaultVariants: {
-    colorScheme: "light",
-    backgroundColor: "base",
+    colorScheme: 'light',
+    backgroundColor: 'base',
   },
 });
 
 type FooterBackgroundColor = NonNullable<
-  VariantProps<typeof footerVariants>["backgroundColor"]
+  VariantProps<typeof footerVariants>['backgroundColor']
 >;
 
 export interface FooterProps extends Omit<
-  ComponentPropsWithoutRef<"footer">,
-  "children"
+  ComponentPropsWithoutRef<'footer'>,
+  'children'
 > {
   backgroundColor: FooterBackgroundColor;
   branding?: ReactNode;
@@ -49,7 +49,7 @@ function Footer({
       className={cn(
         footerVariants({
           backgroundColor,
-          colorScheme: darkVariant ? "dark" : "light",
+          colorScheme: darkVariant ? 'dark' : 'light',
         }),
         className,
       )}
@@ -58,8 +58,8 @@ function Footer({
       <div className="mx-auto flex max-w-screen-md min-w-sm flex-col items-center gap-12 p-12 md:p-16">
         <div
           className={cn(
-            "h-12 flex-shrink-0 items-center justify-start",
-            hasEmptySlotPlaceholder(branding) && "min-w-32",
+            'h-12 flex-shrink-0 items-center justify-start',
+            hasEmptySlotPlaceholder(branding) && 'min-w-32',
           )}
         >
           {branding}

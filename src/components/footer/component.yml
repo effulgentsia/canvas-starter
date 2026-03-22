@@ -12,7 +12,7 @@ props:
       x-formatting-context: block
       title: Copyright notice
       examples:
-        - "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved."
+        - '&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.'
     darkVariant:
       type: boolean
       title: Dark variant

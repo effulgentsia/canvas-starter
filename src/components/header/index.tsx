@@ -1,34 +1,34 @@
-import { hasEmptySlotPlaceholder } from "@/lib/types";
-import { cva } from "class-variance-authority";
-import { cn } from "drupal-canvas";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
-import type { VariantProps } from "class-variance-authority";
+import { hasEmptySlotPlaceholder } from '@/lib/types';
+import { cva } from 'class-variance-authority';
+import { cn } from 'drupal-canvas';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { VariantProps } from 'class-variance-authority';
 
-const headerVariants = cva("", {
+const headerVariants = cva('', {
   variants: {
     colorScheme: {
-      light: "",
-      dark: "dark",
+      light: '',
+      dark: 'dark',
     },
     backgroundColor: {
-      base: "bg-base",
-      mantle: "bg-mantle",
-      crust: "bg-crust",
+      base: 'bg-base',
+      mantle: 'bg-mantle',
+      crust: 'bg-crust',
     },
   },
   defaultVariants: {
-    colorScheme: "light",
-    backgroundColor: "base",
+    colorScheme: 'light',
+    backgroundColor: 'base',
   },
 });
 
 type HeaderBackgroundColor = NonNullable<
-  VariantProps<typeof headerVariants>["backgroundColor"]
+  VariantProps<typeof headerVariants>['backgroundColor']
 >;
 
 export interface HeaderProps extends Omit<
-  ComponentPropsWithoutRef<"header">,
-  "children"
+  ComponentPropsWithoutRef<'header'>,
+  'children'
 > {
   backgroundColor: HeaderBackgroundColor;
   branding?: ReactNode;
@@ -49,7 +49,7 @@ function Header({
       className={cn(
         headerVariants({
           backgroundColor,
-          colorScheme: darkVariant ? "dark" : "light",
+          colorScheme: darkVariant ? 'dark' : 'light',
         }),
         className,
       )}
@@ -58,8 +58,8 @@ function Header({
       <div className="mx-auto flex h-24 max-w-screen-xl min-w-sm items-center justify-between gap-x-12 px-4 sm:px-12 md:h-32 lg:gap-x-16 lg:px-16">
         <div
           className={cn(
-            "h-12 flex-shrink-0 items-center justify-start md:h-16",
-            hasEmptySlotPlaceholder(branding) && "min-w-32",
+            'h-12 flex-shrink-0 items-center justify-start md:h-16',
+            hasEmptySlotPlaceholder(branding) && 'min-w-32',
           )}
         >
           {branding}

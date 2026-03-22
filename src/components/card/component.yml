@@ -7,7 +7,7 @@ props:
   properties:
     iconNameFromLucide:
       type: string
-      title: "Icon: Name from Lucide"
+      title: 'Icon: Name from Lucide'
       examples:
         - lightbulb
         - book-open
@@ -47,7 +47,7 @@ props:
         sapphire: Sapphire
         blue: Blue
         lavender: Lavender
-      title: "Icon: Color"
+      title: 'Icon: Color'
       examples:
         - sapphire
         - rosewater

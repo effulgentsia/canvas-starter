@@ -44,8 +44,8 @@ workaround you can use until we have a better solution in Drupal Canvas:
 <div className="flex">
   <div
     className={cn(
-      branding?.props?.value?.includes("canvas--slot-empty-placeholder") &&
-        "min-w-32",
+      branding?.props?.value?.includes('canvas--slot-empty-placeholder') &&
+        'min-w-32',
     )}
   >
     {branding}

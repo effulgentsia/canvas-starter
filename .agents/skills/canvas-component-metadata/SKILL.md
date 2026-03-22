@@ -261,11 +261,11 @@ component, the variant keys must exactly match the enum values defined in
 ```jsx
 // component.yml defines: enum: [left_aligned, center_aligned]
 // CVA variants must match:
-const variants = cva("base-classes", {
+const variants = cva('base-classes', {
   variants: {
     layout: {
-      left_aligned: "text-left", // matches enum value
-      center_aligned: "text-center", // matches enum value
+      left_aligned: 'text-left', // matches enum value
+      center_aligned: 'text-center', // matches enum value
     },
   },
 });

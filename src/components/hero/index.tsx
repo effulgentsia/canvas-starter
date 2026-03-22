@@ -1,36 +1,36 @@
-import Button from "@/components/button";
-import { cva } from "class-variance-authority";
-import { cn, FormattedText } from "drupal-canvas";
-import { motion } from "motion/react";
-import type { ComponentPropsWithoutRef } from "react";
-import type { CanvasImage } from "@/lib/types";
-import type { VariantProps } from "class-variance-authority";
+import Button from '@/components/button';
+import { cva } from 'class-variance-authority';
+import { cn, FormattedText } from 'drupal-canvas';
+import { motion } from 'motion/react';
+import type { ComponentPropsWithoutRef } from 'react';
+import type { CanvasImage } from '@/lib/types';
+import type { VariantProps } from 'class-variance-authority';
 
-const heroVariants = cva("", {
+const heroVariants = cva('', {
   variants: {
     colorScheme: {
-      light: "",
-      dark: "dark",
+      light: '',
+      dark: 'dark',
     },
     backgroundColor: {
-      base: "bg-base",
-      mantle: "bg-mantle",
-      crust: "bg-crust",
+      base: 'bg-base',
+      mantle: 'bg-mantle',
+      crust: 'bg-crust',
     },
   },
   defaultVariants: {
-    colorScheme: "light",
-    backgroundColor: "base",
+    colorScheme: 'light',
+    backgroundColor: 'base',
   },
 });
 
 type HeroBackgroundColor = NonNullable<
-  VariantProps<typeof heroVariants>["backgroundColor"]
+  VariantProps<typeof heroVariants>['backgroundColor']
 >;
 
 export interface HeroProps extends Omit<
-  ComponentPropsWithoutRef<"section">,
-  "children"
+  ComponentPropsWithoutRef<'section'>,
+  'children'
 > {
   backgroundColor: HeroBackgroundColor;
   buttonLabel: string;
@@ -57,7 +57,7 @@ function Hero({
       className={cn(
         heroVariants({
           backgroundColor,
-          colorScheme: darkVariant ? "dark" : "light",
+          colorScheme: darkVariant ? 'dark' : 'light',
         }),
         className,
       )}

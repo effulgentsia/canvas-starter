@@ -1,9 +1,9 @@
-import Button from "@/components/button";
-import { cva } from "class-variance-authority";
-import { cn } from "drupal-canvas";
-import type { HTMLAttributes } from "react";
+import Button from '@/components/button';
+import { cva } from 'class-variance-authority';
+import { cn } from 'drupal-canvas';
+import type { HTMLAttributes } from 'react';
 
-const navigationVariants = cva("md:flex md:items-center md:gap-12");
+const navigationVariants = cva('md:flex md:items-center md:gap-12');
 
 interface MenuItem {
   title: string;
@@ -11,11 +11,11 @@ interface MenuItem {
 }
 
 const menu: MenuItem[] = [
-  { title: "Home", url: "#" },
-  { title: "Services", url: "#" },
-  { title: "Blog", url: "#" },
-  { title: "About", url: "#" },
-  { title: "Careers", url: "#" },
+  { title: 'Home', url: '#' },
+  { title: 'Services', url: '#' },
+  { title: 'Blog', url: '#' },
+  { title: 'About', url: '#' },
+  { title: 'Careers', url: '#' },
 ];
 
 export type NavigationProps = HTMLAttributes<HTMLDivElement>;

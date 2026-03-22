@@ -1,22 +1,22 @@
-import { useState } from "react";
-import Button from "@/components/button";
+import { useState } from 'react';
+import Button from '@/components/button';
 import {
   buildTierDescriptions,
   buildTierNames,
   buildTierPrices,
   getCurrentPrice,
   TIER_NAMES,
-} from "@/lib/pricing-utils";
-import { cva } from "class-variance-authority";
-import { cn } from "drupal-canvas";
-import type { ComponentPropsWithoutRef } from "react";
-import type { TierName } from "@/lib/pricing-utils";
+} from '@/lib/pricing-utils';
+import { cva } from 'class-variance-authority';
+import { cn } from 'drupal-canvas';
+import type { ComponentPropsWithoutRef } from 'react';
+import type { TierName } from '@/lib/pricing-utils';
 
-const pricingTableVariants = cva("max-w-2xl");
+const pricingTableVariants = cva('max-w-2xl');
 
 export interface PricingTableProps extends Omit<
-  ComponentPropsWithoutRef<"div">,
-  "children"
+  ComponentPropsWithoutRef<'div'>,
+  'children'
 > {
   advancedTierDescription: string;
   advancedTierName: string;
@@ -87,8 +87,8 @@ function PricingTable({
         <div className="w-24 text-right">
           <span
             className={cn(
-              "font-medium text-subtext-0/75",
-              !isAnnual && "text-mauve",
+              'font-medium text-subtext-0/75',
+              !isAnnual && 'text-mauve',
             )}
           >
             Monthly
@@ -102,24 +102,24 @@ function PricingTable({
         >
           <div
             className={cn(
-              "absolute top-0.5 h-6 w-6 rounded-full border-2 border-flamingo bg-inverted-text transition-all duration-200",
-              isAnnual ? "left-7" : "left-0.5",
+              'absolute top-0.5 h-6 w-6 rounded-full border-2 border-flamingo bg-inverted-text transition-all duration-200',
+              isAnnual ? 'left-7' : 'left-0.5',
             )}
           />
         </button>
         <div className="flex w-36 items-center">
           <span
             className={cn(
-              "font-medium text-subtext-0/75",
-              isAnnual && "text-mauve",
+              'font-medium text-subtext-0/75',
+              isAnnual && 'text-mauve',
             )}
           >
             Annual
           </span>
           <span
             className={cn(
-              "ml-2 rounded-full bg-green px-2 py-1 text-xs leading-none font-medium whitespace-nowrap text-inverted-text transition-opacity duration-200",
-              isAnnual ? "opacity-100" : "opacity-0",
+              'ml-2 rounded-full bg-green px-2 py-1 text-xs leading-none font-medium whitespace-nowrap text-inverted-text transition-opacity duration-200',
+              isAnnual ? 'opacity-100' : 'opacity-0',
             )}
           >
             {annualBadgeText}
@@ -142,18 +142,18 @@ function PricingTable({
               key={planName}
               onClick={() => setTier(planName)}
               onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
+                if (e.key === 'Enter' || e.key === ' ') {
                   setTier(planName);
                 }
               }}
-              data-state={isSelected ? "selected" : undefined}
+              data-state={isSelected ? 'selected' : undefined}
               role="button"
               tabIndex={0}
               className={cn(
-                "group flex-1 cursor-pointer rounded-lg p-5 transition-all duration-200",
-                "bg-surface-1",
-                "data-[state=selected]:outline-2 data-[state=selected]:outline-offset-3 data-[state=selected]:outline-mauve",
-                "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
+                'group flex-1 cursor-pointer rounded-lg p-5 transition-all duration-200',
+                'bg-surface-1',
+                'data-[state=selected]:outline-2 data-[state=selected]:outline-offset-3 data-[state=selected]:outline-mauve',
+                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red',
               )}
             >
               <h3 className="mb-3 text-lg font-bold text-text">
@@ -177,7 +177,7 @@ function PricingTable({
       {/* Button */}
       <div>
         <Button
-          label={buttonLabel.replace("{tier}", tierNames[tier])}
+          label={buttonLabel.replace('{tier}', tierNames[tier])}
           link={buttonLink}
           size="lg"
           width="full"

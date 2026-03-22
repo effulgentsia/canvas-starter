@@ -1,8 +1,8 @@
-import { recommended } from "@drupal-canvas/eslint-config";
+import { recommended } from '@drupal-canvas/eslint-config';
 
 export default [
   ...recommended,
   {
-    ignores: ["dist/**"],
+    ignores: ['dist/**'],
   },
 ];

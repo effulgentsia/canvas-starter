@@ -1,4 +1,4 @@
-const TIER_NAMES = ["entry", "mid", "advanced"] as const;
+const TIER_NAMES = ['entry', 'mid', 'advanced'] as const;
 
 type TierName = (typeof TIER_NAMES)[number];
 
@@ -82,7 +82,7 @@ const getCurrentPrice = ({
   isAnnual: boolean;
   tierName: TierName;
   tierPrices: TierPrices;
-}) => tierPrices[tierName][isAnnual ? "annual" : "monthly"];
+}) => tierPrices[tierName][isAnnual ? 'annual' : 'monthly'];
 
 export {
   TIER_NAMES,

@@ -1,7 +1,7 @@
-import { isValidElement } from "react";
-import type { ReactNode } from "react";
+import { isValidElement } from 'react';
+import type { ReactNode } from 'react';
 
-export type BackgroundColor = "base" | "mantle" | "crust";
+export type BackgroundColor = 'base' | 'mantle' | 'crust';
 
 export interface CanvasImage {
   alt: string;
@@ -15,5 +15,5 @@ export interface CanvasImage {
 // @see docs/important-notes.md
 export const hasEmptySlotPlaceholder = (slot?: ReactNode) =>
   isValidElement<{ value?: string }>(slot) &&
-  typeof slot.props.value === "string" &&
-  slot.props.value.includes("canvas--slot-empty-placeholder");
+  typeof slot.props.value === 'string' &&
+  slot.props.value.includes('canvas--slot-empty-placeholder');
