@@ -9,11 +9,7 @@ npx skills add vercel-labs/agent-browser --skill agent-browser -y && \
 npx skills add vercel-labs/agent-browser --skill dogfood -y
 ```
 
-Use the dogfood skill to verify the result in Canvas Workbench. Start it with:
-
-```bash
-npm run dev
-```
+Use the dogfood skill to verify the result in Canvas Workbench.
 
 Before refactoring, capture homepage screenshots at desktop and mobile widths.
 After refactoring, capture the same screenshots and compare them to the

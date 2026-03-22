@@ -35,6 +35,11 @@
       "source": "drupal-canvas/skills",
       "sourceType": "github",
       "computedHash": "3ed6a381e96ecd29f2fa12e6770a38c80ecb4c3fb2b02de16b19062bf559fd48"
+    },
+    "canvas-workbench": {
+      "source": "drupal-canvas/skills",
+      "sourceType": "github",
+      "computedHash": "60f698c8e3dc17c4dbd8e8dad7533dfb04814e2df27be8aa65eb8ac894c3ec95"
     }
   }
 }
