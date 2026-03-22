@@ -2,14 +2,14 @@
   "name": "canvas-cc-starter",
   "version": "0.0.0",
   "private": true,
-  "description": "Build and test Drupal Canvas Code Components with this preconfigured development environment.",
+  "description": "Get the latest experimental features for Drupal Canvas Code Components with this template repository for Drupal Canvas Create.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/balintbrews/canvas-cc-starter.git"
+    "url": "git+https://github.com/balintbrews/canvas-starter.git"
   },
   "author": "Bálint Kléri (https://balintbrews.com)",
-  "bugs": "https://github.com/balintbrews/canvas-cc-starter/issues",
-  "homepage": "https://github.com/balintbrews/canvas-cc-starter#readme",
+  "bugs": "https://github.com/balintbrews/canvas-starter/issues",
+  "homepage": "https://github.com/balintbrews/canvas-starter#readme",
   "type": "module",
   "dependencies": {
     "@drupal-canvas/workbench": "^0.2.0",
