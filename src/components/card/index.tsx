@@ -3,8 +3,6 @@ import { cn, FormattedText } from 'drupal-canvas';
 import type { CSSProperties, HTMLAttributes } from 'react';
 import type { VariantProps } from 'class-variance-authority';
 
-const cardVariants = cva('flex flex-col gap-3 rounded-lg bg-surface-0 p-6');
-
 const cardIconVariants = cva('size-8', {
   variants: {
     iconColor: {
@@ -63,7 +61,13 @@ function Card({
     : undefined;
 
   return (
-    <div className={cn(cardVariants(), className)} {...props}>
+    <div
+      className={cn(
+        'flex flex-col gap-3 rounded-lg bg-surface-0 p-6',
+        className,
+      )}
+      {...props}
+    >
       {iconNameFromLucide && (
         <div
           className={cn(cardIconVariants({ iconColor }))}

@@ -1,8 +1,5 @@
-import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
 import type { HTMLAttributes } from 'react';
-
-const navigationVariants = cva('md:flex md:items-center md:gap-12');
 
 interface MenuItem {
   title: string;
@@ -23,7 +20,10 @@ function Navigation({ className, ...props }: NavigationProps) {
   // Data fetching is supported using SWR and @drupal-api-client/json-api-client.
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
   return (
-    <div className={cn(navigationVariants(), className)} {...props}>
+    <div
+      className={cn('md:flex md:items-center md:gap-12', className)}
+      {...props}
+    >
       <nav aria-label="Global" className="hidden md:block!">
         <ul className="flex items-center gap-6 text-sm">
           {menu.map((item) => (

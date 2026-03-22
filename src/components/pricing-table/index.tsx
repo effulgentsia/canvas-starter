@@ -6,12 +6,9 @@ import {
   getCurrentPrice,
   TIER_NAMES,
 } from '@/lib/pricing-utils';
-import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef } from 'react';
 import type { TierName } from '@/lib/pricing-utils';
-
-const pricingTableVariants = cva('max-w-2xl');
 
 export interface PricingTableProps extends Omit<
   ComponentPropsWithoutRef<'div'>,
@@ -80,7 +77,7 @@ function PricingTable({
   });
 
   return (
-    <div className={cn(pricingTableVariants(), className)} {...props}>
+    <div className={cn('max-w-2xl', className)} {...props}>
       {/* Billing toggle */}
       <div className="mb-8 flex items-center justify-center">
         <div className="w-24 text-right">

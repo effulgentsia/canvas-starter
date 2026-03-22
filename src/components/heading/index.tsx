@@ -1,10 +1,5 @@
-import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef } from 'react';
-
-const headingVariants = cva(
-  'mx-auto max-w-5xl text-center text-2xl font-extrabold text-balance text-text md:text-3xl',
-);
 
 export interface HeadingProps extends Omit<
   ComponentPropsWithoutRef<'h2'>,
@@ -15,7 +10,13 @@ export interface HeadingProps extends Omit<
 
 function Heading({ className, text, ...props }: HeadingProps) {
   return (
-    <h2 className={cn(headingVariants(), className)} {...props}>
+    <h2
+      className={cn(
+        'mx-auto max-w-5xl text-center text-2xl font-extrabold text-balance text-text md:text-3xl',
+        className,
+      )}
+      {...props}
+    >
       {text}
     </h2>
   );

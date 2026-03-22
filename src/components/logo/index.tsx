@@ -1,12 +1,7 @@
 // SVG source: https://www.svgrepo.com/svg/200008/human-resources-search.
 
-import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
 import type { ReactNode } from 'react';
-
-const logoVariants = cva(
-  'inline-flex h-12 max-h-16 items-center gap-2 md:h-16',
-);
 
 export interface LogoProps {
   className?: string;
@@ -70,7 +65,10 @@ const logoContent: ReactNode = (
 );
 
 function Logo({ className, linkToFrontPage = true }: LogoProps) {
-  const classes = cn(logoVariants(), className);
+  const classes = cn(
+    'inline-flex h-12 max-h-16 items-center gap-2 md:h-16',
+    className,
+  );
 
   if (linkToFrontPage) {
     return (
