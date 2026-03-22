@@ -3,7 +3,7 @@ import { cn } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef } from 'react';
 
 const headingVariants = cva(
-  'mx-auto max-w-screen-lg text-center text-2xl font-extrabold text-balance text-text md:text-3xl',
+  'mx-auto max-w-5xl text-center text-2xl font-extrabold text-balance text-text md:text-3xl',
 );
 
 export interface HeadingProps extends Omit<

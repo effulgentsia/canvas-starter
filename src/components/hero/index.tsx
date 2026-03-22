@@ -61,10 +61,10 @@ function Hero({
       )}
       {...props}
     >
-      <div className="mx-auto max-w-screen-xl sm:grid sm:grid-cols-2 sm:items-center">
+      <div className="mx-auto max-w-7xl sm:grid sm:grid-cols-2 sm:items-center">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="flex max-w-xl flex-col gap-8">
-            <h2 className="tracking-relaxed bg-gradient-to-r from-peach to-mauve bg-clip-text text-2xl font-extrabold text-balance text-transparent md:text-4xl">
+            <h2 className="tracking-relaxed bg-linear-to-r from-peach to-mauve bg-clip-text text-2xl font-extrabold text-balance text-transparent md:text-4xl">
               {title}
             </h2>
             <FormattedText

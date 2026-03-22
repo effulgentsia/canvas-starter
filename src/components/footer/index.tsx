@@ -55,10 +55,10 @@ function Footer({
       )}
       {...props}
     >
-      <div className="mx-auto flex max-w-screen-md min-w-sm flex-col items-center gap-12 p-12 md:p-16">
+      <div className="mx-auto flex max-w-3xl min-w-sm flex-col items-center gap-12 p-12 md:p-16">
         <div
           className={cn(
-            'h-12 flex-shrink-0 items-center justify-start',
+            'h-12 shrink-0 items-center justify-start',
             hasEmptySlotPlaceholder(branding) && 'min-w-32',
           )}
         >

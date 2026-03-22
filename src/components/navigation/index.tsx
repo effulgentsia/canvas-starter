@@ -24,7 +24,7 @@ function Navigation({ className, ...props }: NavigationProps) {
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
   return (
     <div className={cn(navigationVariants(), className)} {...props}>
-      <nav aria-label="Global" className="hidden md:!block">
+      <nav aria-label="Global" className="hidden md:block!">
         <ul className="flex items-center gap-6 text-sm">
           {menu.map((item) => (
             <li key={item.title}>
@@ -47,7 +47,7 @@ function Navigation({ className, ...props }: NavigationProps) {
             Login
           </a>
 
-          <div className="hidden sm:!flex">
+          <div className="hidden sm:flex!">
             <a
               href="/"
               className="inline-block rounded-md bg-surface-0/75 px-5 py-2.5 text-sm font-medium text-text transition hover:text-text/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
