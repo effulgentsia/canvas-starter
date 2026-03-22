@@ -1,4 +1,3 @@
-import Button from '@/components/button';
 import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
 import type { HTMLAttributes } from 'react';
@@ -41,10 +40,20 @@ function Navigation({ className, ...props }: NavigationProps) {
       </nav>
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
-          <Button label="Login" link="/" variant="teal" />
+          <a
+            href="/"
+            className="inline-block rounded-md bg-teal px-5 py-2.5 text-sm font-medium text-inverted-text shadow-sm transition hover:bg-teal/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+          >
+            Login
+          </a>
 
           <div className="hidden sm:!flex">
-            <Button label="Register" link="/" variant="surface" />
+            <a
+              href="/"
+              className="inline-block rounded-md bg-surface-0/75 px-5 py-2.5 text-sm font-medium text-text transition hover:text-text/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+            >
+              Register
+            </a>
           </div>
         </div>
 
