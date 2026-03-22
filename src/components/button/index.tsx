@@ -1,5 +1,6 @@
 import { cva } from "class-variance-authority";
 import { cn } from "drupal-canvas";
+import type { ComponentPropsWithoutRef } from "react";
 import type { VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
@@ -28,24 +29,25 @@ const buttonVariants = cva(
   },
 );
 
-interface ButtonProps extends VariantProps<typeof buttonVariants> {
+interface ButtonProps
+  extends
+    Omit<ComponentPropsWithoutRef<"a">, "children">,
+    VariantProps<typeof buttonVariants> {
   label: string;
-  href: string;
-  className?: string;
 }
 
 const Button = ({
   label,
-  href,
   variant,
   width,
   size,
   className,
+  ...props
 }: ButtonProps) => {
   return (
     <a
       className={cn(buttonVariants({ variant, width, size }), className)}
-      href={href}
+      {...props}
     >
       {label}
     </a>
