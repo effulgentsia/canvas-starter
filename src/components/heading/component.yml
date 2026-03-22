@@ -6,8 +6,8 @@ required:
 props:
   properties:
     text:
-      title: Text
       type: string
+      title: Text
       examples:
         - We bring human strengths to AI-first teams.
         - We make great AI outputs genuinely excellent.

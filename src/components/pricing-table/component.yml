@@ -21,67 +21,66 @@ required:
 props:
   properties:
     entryTierName:
-      title: "Entry tier: Name"
       type: string
+      title: "Entry tier: Name"
       examples:
         - Starter
     entryTierDescription:
-      title: "Entry tier: Description"
       type: string
+      title: "Entry tier: Description"
       examples:
         - For pilots and focused projects
     entryTierPriceMonthly:
-      title: "Entry tier: Price, monthly"
       type: number
+      title: "Entry tier: Price, monthly"
       examples:
         - 2500
     entryTierPriceAnnual:
-      title: "Entry tier: Price, annual"
       type: number
+      title: "Entry tier: Price, annual"
       examples:
         - 25000
     midTierName:
-      title: "Mid tier: Name"
       type: string
+      title: "Mid tier: Name"
       examples:
         - Growth
     midTierDescription:
-      title: "Mid tier: Description"
       type: string
+      title: "Mid tier: Description"
       examples:
         - For teams scaling AI-assisted delivery
     midTierPriceMonthly:
-      title: "Mid tier: Price, monthly"
       type: number
+      title: "Mid tier: Price, monthly"
       examples:
         - 4500
     midTierPriceAnnual:
-      title: "Mid tier: Price, annual"
       type: number
+      title: "Mid tier: Price, annual"
       examples:
         - 45000
     advancedTierName:
-      title: "Advanced tier: Name"
       type: string
+      title: "Advanced tier: Name"
       examples:
         - Enterprise
     advancedTierDescription:
-      title: "Advanced tier: Description"
       type: string
+      title: "Advanced tier: Description"
       examples:
         - For complex organizations and mission-critical work
     advancedTierPriceMonthly:
-      title: "Advanced tier: Price, monthly"
       type: number
+      title: "Advanced tier: Price, monthly"
       examples:
         - 9500
     advancedTierPriceAnnual:
-      title: "Advanced tier: Price, annual"
       type: number
+      title: "Advanced tier: Price, annual"
       examples:
         - 95000
     defaultTier:
-      title: Default tier
       type: string
       enum:
         - entry
@@ -91,27 +90,28 @@ props:
         entry: Entry
         mid: Mid
         advanced: Advanced
+      title: Default tier
       examples:
         - entry
     annualSelectedByDefault:
-      title: "Annual selected by default"
       type: boolean
+      title: Annual selected by default
       examples:
         - false
     annualBadgeText:
-      title: Annual badge text
       type: string
+      title: Annual badge text
       examples:
         - Save 17%
     buttonLabel:
-      title: Button label
       type: string
+      title: Button label
       examples:
         - Choose {tier}
     buttonLink:
-      title: Button link
       type: string
       format: uri-reference
+      title: Button link
       examples:
-        - "/page/1"
+        - /page/1
 slots: []

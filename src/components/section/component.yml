@@ -5,13 +5,12 @@ required: []
 props:
   properties:
     darkVariant:
-      title: Dark variant
       type: boolean
+      title: Dark variant
       examples:
         - false
         - false
     backgroundColor:
-      title: Background color
       type: string
       enum:
         - base
@@ -21,6 +20,7 @@ props:
         base: Base
         mantle: Mantle
         crust: Crust
+      title: Background color
       examples:
         - mantle
         - crust

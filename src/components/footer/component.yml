@@ -7,19 +7,18 @@ required:
 props:
   properties:
     copyrightNotice:
-      title: Copyright notice
       type: string
       contentMediaType: text/html
       x-formatting-context: block
+      title: Copyright notice
       examples:
         - "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved."
     darkVariant:
-      title: Dark variant
       type: boolean
+      title: Dark variant
       examples:
         - true
     backgroundColor:
-      title: Background color
       type: string
       enum:
         - base
@@ -29,6 +28,7 @@ props:
         base: Base
         mantle: Mantle
         crust: Crust
+      title: Background color
       examples:
         - crust
 slots:

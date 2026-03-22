@@ -6,8 +6,8 @@ required:
 props:
   properties:
     iconNameFromLucide:
-      title: "Icon: Name from Lucide"
       type: string
+      title: "Icon: Name from Lucide"
       examples:
         - lightbulb
         - book-open
@@ -16,7 +16,6 @@ props:
         - file-chart-column-increasing
         - presentation
     iconColor:
-      title: "Icon: Color"
       type: string
       enum:
         - rosewater
@@ -48,6 +47,7 @@ props:
         sapphire: Sapphire
         blue: Blue
         lavender: Lavender
+      title: "Icon: Color"
       examples:
         - sapphire
         - rosewater
@@ -56,8 +56,8 @@ props:
         - green
         - pink
     title:
-      title: Title
       type: string
+      title: Title
       examples:
         - Creative direction
         - Product storytelling
@@ -66,21 +66,27 @@ props:
         - Insight synthesis
         - Executive communication
     description:
-      title: Description
       type: string
       contentMediaType: text/html
       x-formatting-context: block
+      title: Description
       examples:
-        - We shape raw ideas and AI-generated directions into clear creative
+        - >-
+          We shape raw ideas and AI-generated directions into clear creative
           choices your team can execute confidently.
-        - We turn feature lists and technical outputs into narratives customers
+        - >-
+          We turn feature lists and technical outputs into narratives customers
           understand and care about.
-        - We define reusable messaging rules so AI outputs stay on-brand across
+        - >-
+          We define reusable messaging rules so AI outputs stay on-brand across
           channels, markets, and teams.
-        - We develop campaign themes and creative briefs that connect business
+        - >-
+          We develop campaign themes and creative briefs that connect business
           goals to audience needs.
-        - We combine model output, research, and team context into prioritized
+        - >-
+          We combine model output, research, and team context into prioritized
           insights that drive better decisions.
-        - We craft high-stakes updates, memos, and presentations with the right
+        - >-
+          We craft high-stakes updates, memos, and presentations with the right
           tone, structure, and strategic focus.
 slots: []

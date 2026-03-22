@@ -6,10 +6,10 @@ required:
 props:
   properties:
     text:
-      title: Text
       type: string
       contentMediaType: text/html
       x-formatting-context: block
+      title: Text
       examples:
         - >-
           We partner with AI-native teams to add what machines still struggle to

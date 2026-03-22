@@ -5,8 +5,8 @@ required: []
 props:
   properties:
     linkToFrontPage:
-      title: Link to front page
       type: boolean
+      title: Link to front page
       examples:
         - true
 slots: []
