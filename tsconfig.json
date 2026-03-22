@@ -9,8 +9,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "types": ["node", "vite/client"],
+    "types": ["node"],
     "strict": true
   },
-  "include": [".storybook/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
