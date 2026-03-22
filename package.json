@@ -12,7 +12,6 @@
   "homepage": "https://github.com/balintbrews/canvas-starter#readme",
   "type": "module",
   "dependencies": {
-    "@drupal-canvas/workbench": "^0.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "drupal-canvas": "^0.3.1",
@@ -23,6 +22,7 @@
   "devDependencies": {
     "@drupal-canvas/cli": "^0.8.1",
     "@drupal-canvas/eslint-config": "^0.2.0",
+    "@drupal-canvas/workbench": "^0.2.0",
     "@eslint/js": "^9.39.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@types/react": "^19.2.14",
