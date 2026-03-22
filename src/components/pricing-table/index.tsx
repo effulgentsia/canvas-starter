@@ -5,10 +5,39 @@ import {
   buildTierNames,
   buildTierPrices,
   getCurrentPrice,
+  TIER_NAMES,
 } from "@/lib/pricing-utils";
+import { cva } from "class-variance-authority";
 import { cn } from "drupal-canvas";
+import type { ComponentPropsWithoutRef } from "react";
+import type { TierName } from "@/lib/pricing-utils";
 
-const PricingTable = ({
+const pricingTableVariants = cva("max-w-2xl");
+
+export interface PricingTableProps extends Omit<
+  ComponentPropsWithoutRef<"div">,
+  "children"
+> {
+  advancedTierDescription: string;
+  advancedTierName: string;
+  advancedTierPriceAnnual: number;
+  advancedTierPriceMonthly: number;
+  annualBadgeText: string;
+  annualSelectedByDefault?: boolean;
+  buttonLabel: string;
+  buttonLink: string;
+  defaultTier: TierName;
+  entryTierDescription: string;
+  entryTierName: string;
+  entryTierPriceAnnual: number;
+  entryTierPriceMonthly: number;
+  midTierDescription: string;
+  midTierName: string;
+  midTierPriceAnnual: number;
+  midTierPriceMonthly: number;
+}
+
+function PricingTable({
   entryTierName,
   entryTierDescription,
   entryTierPriceMonthly,
@@ -26,9 +55,11 @@ const PricingTable = ({
   annualBadgeText,
   buttonLabel,
   buttonLink,
-}) => {
-  const [isAnnual, setIsAnnual] = useState(annualSelectedByDefault);
-  const [tier, setTier] = useState(defaultTier);
+  className,
+  ...props
+}: PricingTableProps) {
+  const [isAnnual, setIsAnnual] = useState(annualSelectedByDefault ?? false);
+  const [tier, setTier] = useState<TierName>(defaultTier);
 
   const tierNames = buildTierNames({
     entryTierName,
@@ -50,7 +81,7 @@ const PricingTable = ({
   });
 
   return (
-    <div className="max-w-2xl">
+    <div className={cn(pricingTableVariants(), className)} {...props}>
       {/* Billing toggle */}
       <div className="mb-8 flex items-center justify-center">
         <div className="w-24 text-right">
@@ -65,6 +96,7 @@ const PricingTable = ({
         </div>
 
         <button
+          type="button"
           onClick={() => setIsAnnual(!isAnnual)}
           className="relative mx-3 h-7 w-14 cursor-pointer rounded-full border-0 bg-surface-1 p-0.5"
         >
@@ -97,7 +129,7 @@ const PricingTable = ({
 
       {/* Pricing tiers */}
       <div className="mb-6 flex flex-col gap-4 sm:flex-row">
-        {["entry", "mid", "advanced"].map((planName) => {
+        {TIER_NAMES.map((planName) => {
           const isSelected = tier === planName;
           const price = getCurrentPrice({
             tierPrices,
@@ -146,13 +178,14 @@ const PricingTable = ({
       <div>
         <Button
           label={buttonLabel.replace("{tier}", tierNames[tier])}
-          href={buttonLink}
+          link={buttonLink}
           size="lg"
           width="full"
         />
       </div>
     </div>
   );
-};
+}
 
+export { PricingTable };
 export default PricingTable;

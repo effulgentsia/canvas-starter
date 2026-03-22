@@ -29,29 +29,35 @@ const buttonVariants = cva(
   },
 );
 
-interface ButtonProps
+export interface ButtonProps
   extends
-    Omit<ComponentPropsWithoutRef<"a">, "children">,
+    Omit<ComponentPropsWithoutRef<"a">, "children" | "href">,
     VariantProps<typeof buttonVariants> {
+  href?: string;
   label: string;
+  link?: string;
 }
 
-const Button = ({
+function Button({
+  className,
+  href,
   label,
+  link,
+  size,
   variant,
   width,
-  size,
-  className,
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   return (
     <a
-      className={cn(buttonVariants({ variant, width, size }), className)}
+      href={href ?? link}
+      className={cn(buttonVariants({ size, variant, width }), className)}
       {...props}
     >
       {label}
     </a>
   );
-};
+}
 
+export { Button };
 export default Button;

@@ -1,17 +1,30 @@
 import Button from "@/components/button";
+import { cva } from "class-variance-authority";
+import { cn } from "drupal-canvas";
+import type { HTMLAttributes } from "react";
 
-const Navigation = () => {
+const navigationVariants = cva("md:flex md:items-center md:gap-12");
+
+interface MenuItem {
+  title: string;
+  url: string;
+}
+
+const menu: MenuItem[] = [
+  { title: "Home", url: "#" },
+  { title: "Services", url: "#" },
+  { title: "Blog", url: "#" },
+  { title: "About", url: "#" },
+  { title: "Careers", url: "#" },
+];
+
+export type NavigationProps = HTMLAttributes<HTMLDivElement>;
+
+function Navigation({ className, ...props }: NavigationProps) {
   // Data fetching is supported using SWR and @drupal-api-client/json-api-client.
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
-  const menu = [
-    { title: "Home", url: "#" },
-    { title: "Services", url: "#" },
-    { title: "Blog", url: "#" },
-    { title: "About", url: "#" },
-    { title: "Careers", url: "#" },
-  ];
   return (
-    <div className="md:flex md:items-center md:gap-12">
+    <div className={cn(navigationVariants(), className)} {...props}>
       <nav aria-label="Global" className="hidden md:!block">
         <ul className="flex items-center gap-6 text-sm">
           {menu.map((item) => (
@@ -28,15 +41,18 @@ const Navigation = () => {
       </nav>
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
-          <Button label="Login" href="/" variant="teal" />
+          <Button label="Login" link="/" variant="teal" />
 
           <div className="hidden sm:!flex">
-            <Button label="Register" href="/" variant="surface" />
+            <Button label="Register" link="/" variant="surface" />
           </div>
         </div>
 
         <div className="block md:hidden">
-          <button className="rounded-sm bg-surface-2 p-2 text-text">
+          <button
+            type="button"
+            className="rounded-sm bg-surface-2 p-2 text-text"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="size-5"
@@ -56,6 +72,7 @@ const Navigation = () => {
       </div>
     </div>
   );
-};
+}
 
+export { Navigation };
 export default Navigation;
