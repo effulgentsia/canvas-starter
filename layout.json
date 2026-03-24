@@ -21,7 +21,7 @@
       "type": "js.navigation",
       "props": {}
     },
-    "main-content": {
+    "outlet": {
       "type": "Outlet"
     },
     "c3ba66be-2b6b-4030-96d0-3a99b77471fe": {
